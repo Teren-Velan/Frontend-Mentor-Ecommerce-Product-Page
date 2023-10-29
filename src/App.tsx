@@ -1,11 +1,9 @@
-import "./App.css";
+import { PageLayout, Header, Main } from "./components";
 
 function App() {
   return (
     <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <PageLayout header={<Header />} main={<Main></Main>} />
     </>
   );
 }
