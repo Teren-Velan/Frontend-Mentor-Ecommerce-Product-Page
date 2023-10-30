@@ -23,6 +23,28 @@ export const HeaderMenu = styled.div`
   img {
     height: 16px;
   }
+
+  .container {
+    height: 100%;
+    background-color: white;
+    width: 65%;
+    min-width: 12rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid rgb(219, 219, 219, 0.9);
+    /* margin-left: -70%; */
+  }
+
+  .HeaderMenu__closeIcon {
+    margin: 1.5rem;
+  }
+
+  .HeaderMenu_navList {
+    /* height: 10rem; */
+    line-height: 3rem;
+    margin-left: 1.5rem;
+  }
 `;
 
 export const HeaderUser = styled.div`
