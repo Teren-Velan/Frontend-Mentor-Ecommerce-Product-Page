@@ -24,7 +24,7 @@ export const HeaderMenu = styled.div`
     height: 16px;
   }
 
-  .container {
+  .HeaderMenu__NavContainer {
     height: 100%;
     background-color: white;
     width: 65%;
@@ -33,17 +33,41 @@ export const HeaderMenu = styled.div`
     top: 0;
     left: 0;
     border-right: 1px solid rgb(219, 219, 219, 0.9);
-    /* margin-left: -70%; */
-  }
+    margin-left: -70%;
+    transition: all 0.3s ease-in-out 0s;
 
-  .HeaderMenu__closeIcon {
-    margin: 1.5rem;
-  }
+    &.active {
+      margin-left: 0%;
+    }
 
-  .HeaderMenu_navList {
-    /* height: 10rem; */
-    line-height: 3rem;
-    margin-left: 1.5rem;
+    .HeaderMenu__closeIcon {
+      margin: 1.5rem;
+    }
+
+    .HeaderMenu_nav {
+      height: 15rem;
+      display: flex;
+
+      .HeaderMenu_navList {
+        margin-left: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        text-decoration: none;
+
+        a {
+          color: var(--Very-dark-blue);
+          font-size: 18px;
+          font-weight: 700;
+          cursor: pointer;
+
+          &:hover {
+            width: fit-content;
+            border-bottom: 2px solid var(--Orange);
+          }
+        }
+      }
+    }
   }
 `;
 
