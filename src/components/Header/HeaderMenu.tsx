@@ -1,26 +1,29 @@
 import * as C from "./style";
-import { useState } from "react";
 import IconMenu from "../../assets/header/icon-menu.svg";
 import Logo from "../../assets/header/logo.svg";
 import CloseIcon from "../../assets/header/icon-close.svg";
 import { NavbarCategoriesList } from "../../modules/Header/constant";
+import { useAppSelector, useAppDispatch } from "../../hooks/useRedux";
+import { toggleNavbar } from "../../feature/toggle/toggleSlice";
 
 export const HeaderMenu: React.FC = () => {
-  const [navbarActive, setNavbarActive] = useState(true);
+  //returns the current state of isToggleNavbar
+  const navbarToggleBoolean = useAppSelector(
+    (state) => state.toggle.isToggleNavbar
+  );
 
-  const handleOnNavbarOpen = () => {
-    setNavbarActive(true);
-  };
+  const dispatch = useAppDispatch();
 
-  const handleOnNavbarClose = () => {
-    setNavbarActive(!navbarActive);
+  //function to handle navbar toggle
+  const handleNavbarToggle = () => {
+    dispatch(toggleNavbar());
   };
 
   return (
     <C.HeaderMenu>
       <button
         onClick={() => {
-          handleOnNavbarOpen();
+          handleNavbarToggle();
         }}
       >
         <img src={IconMenu} alt="menu-icon" />
@@ -29,14 +32,16 @@ export const HeaderMenu: React.FC = () => {
         <img src={Logo} alt="logo" />
       </a>
 
-      <nav className={`${navbarActive ? "HeaderMenu__nav" : ""}`}>
+      <nav className={`${navbarToggleBoolean ? "HeaderMenu__nav" : ""}`}>
         <div
-          className={`HeaderMenu__NavContainer ${navbarActive ? "active" : ""}`}
+          className={`HeaderMenu__NavContainer ${
+            navbarToggleBoolean ? "active" : ""
+          }`}
         >
           <button
             className="HeaderMenu__closeIcon"
             onClick={() => {
-              handleOnNavbarClose();
+              handleNavbarToggle();
             }}
           >
             <img src={CloseIcon} alt="menu-icon" />
