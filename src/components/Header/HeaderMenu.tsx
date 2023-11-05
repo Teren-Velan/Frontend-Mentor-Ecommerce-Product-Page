@@ -6,14 +6,14 @@ import CloseIcon from "../../assets/header/icon-close.svg";
 import { NavbarCategoriesList } from "../../modules/Header/constant";
 
 export const HeaderMenu: React.FC = () => {
-  const [active, setActive] = useState(true);
+  const [navbarActive, setNavbarActive] = useState(true);
 
   const handleOnNavbarOpen = () => {
-    setActive(true);
+    setNavbarActive(true);
   };
 
   const handleOnNavbarClose = () => {
-    setActive(!active);
+    setNavbarActive(!navbarActive);
   };
 
   return (
@@ -29,8 +29,10 @@ export const HeaderMenu: React.FC = () => {
         <img src={Logo} alt="logo" />
       </a>
 
-      <nav>
-        <div className={`HeaderMenu__NavContainer ${active ? "active" : ""}`}>
+      <nav className={`${navbarActive ? "HeaderMenu__nav" : ""}`}>
+        <div
+          className={`HeaderMenu__NavContainer ${navbarActive ? "active" : ""}`}
+        >
           <button
             className="HeaderMenu__closeIcon"
             onClick={() => {
@@ -39,8 +41,8 @@ export const HeaderMenu: React.FC = () => {
           >
             <img src={CloseIcon} alt="menu-icon" />
           </button>
-          <div className="HeaderMenu_nav">
-            <div className="HeaderMenu_navList">
+          <div className="HeaderMenu__navListContainer">
+            <div className="HeaderMenu__navList">
               {NavbarCategoriesList.map(({ id, category }) => {
                 return (
                   <a key={id} href="">
