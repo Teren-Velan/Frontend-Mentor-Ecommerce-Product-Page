@@ -24,6 +24,15 @@ export const HeaderMenu = styled.div`
     height: 16px;
   }
 
+  .HeaderMenu__nav {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    margin-left: 0;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+  }
+
   .HeaderMenu__NavContainer {
     height: 100%;
     background-color: white;
@@ -44,11 +53,11 @@ export const HeaderMenu = styled.div`
       margin: 1.5rem;
     }
 
-    .HeaderMenu_nav {
+    .HeaderMenu__navListContainer {
       height: 15rem;
       display: flex;
 
-      .HeaderMenu_navList {
+      .HeaderMenu__navList {
         margin-left: 1.5rem;
         display: flex;
         justify-content: space-around;

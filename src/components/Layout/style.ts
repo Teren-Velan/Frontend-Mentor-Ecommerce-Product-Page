@@ -18,7 +18,7 @@ export const Header = styled.div`
   height: 5rem;
 
   ${media.desktop} {
-    width: "80%";
+    width: "100%";
   }
 `;
 
@@ -27,6 +27,7 @@ export const Main = styled.div`
 
   ${media.desktop} {
     width: 80%;
+    margin: 0 auto;
     overflow: none;
   }
 `;

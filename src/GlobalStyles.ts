@@ -44,6 +44,7 @@ const GlobalStyle = createGlobalStyle`
         --Dark-grayish-blue: hsl(219, 9%, 45%);
         --Grayish-blue: hsl(220, 14%, 75%);
         --Light-grayish-blue: hsl(223, 64%, 98%);
+        --Light-grey:hsl(219,8.7%,45.1%)
         --White: hsl(0, 0%, 100%);
         --Black: hsl(0, 0%, 0%); 
     }
