@@ -1,6 +1,6 @@
 import * as C from "./style";
-import IconCart from "../../assets/header/icon-cart.svg";
-import IconAvatar from "../../assets/header/image-avatar.png";
+import IconCart from "../../assets/images/header/icon-cart.svg";
+import IconAvatar from "../../assets/images/header/image-avatar.png";
 
 export const HeaderUser: React.FC = () => {
   return (

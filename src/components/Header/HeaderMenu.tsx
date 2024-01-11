@@ -1,7 +1,7 @@
 import * as C from "./style";
-import IconMenu from "../../assets/header/icon-menu.svg";
-import Logo from "../../assets/header/logo.svg";
-import CloseIcon from "../../assets/header/icon-close.svg";
+import IconMenu from "../../assets/images/header/icon-menu.svg";
+import Logo from "../../assets/images/header/logo.svg";
+import CloseIcon from "../../assets/images/header/icon-close.svg";
 import { NavbarCategoriesList } from "../../modules/Header/constant";
 import { useAppSelector, useAppDispatch } from "../../hooks/useRedux";
 import { toggleNavbar } from "../../feature/toggle/toggleSlice";

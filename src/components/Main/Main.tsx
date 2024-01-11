@@ -1,3 +1,12 @@
+import { MainProductImage } from "./MainProductImage";
+import { MainProductDescription } from "./MainProductDescription";
+import * as C from "./style";
+
 export const Main = () => {
-  return <div>Main testt</div>;
+  return (
+    <C.Main>
+      <MainProductImage />
+      <MainProductDescription />
+    </C.Main>
+  );
 };
