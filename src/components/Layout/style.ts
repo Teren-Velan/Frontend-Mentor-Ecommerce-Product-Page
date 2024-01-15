@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const media = {
-  //   mobile: "@media(min-width:375px)",
+  mobile: "@media(min-width:375px)",
   desktop: "@media(min-width:1440px)",
 };
 
@@ -19,6 +19,10 @@ export const Header = styled.div`
 
   ${media.desktop} {
     width: "100%";
+  }
+
+  ${media.mobile} {
+    height: 3.5rem;
   }
 `;
 
